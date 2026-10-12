@@ -14,8 +14,9 @@ test = ["pytest"]
 detector = ["mmengine==0.10.7", "mmdet==3.3.0", "pycocotools"]
 
 [tool.setuptools]
-packages = ["src"]
+packages = ["src", "gui"]
+package-dir = {src = "experiments/src"}
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
-pythonpath = ["."]
+testpaths = ["experiments/tests", "gui/tests"]
+pythonpath = [".", "experiments"]

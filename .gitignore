@@ -1,52 +1,19 @@
 # Python environments and caches
 .venv/
-venv/
-env/
-__pycache__/
-*.py[cod]
-.pytest_cache/
-.mypy_cache/
-.ruff_cache/
-.coverage
-.coverage.*
-htmlcov/
-*.egg-info/
-build/
-dist/
+
 
 # Local data, model weights, and experiment outputs
 /data/
-/datasets/
-/runs/
-*.pth
-*.pt
-*.ckpt
-*.onnx
-*.safetensors
-*.whl
-/reports/*
-# Keep authored research notes; generated reports stay local.
-!/reports/reproduction/
-/reports/reproduction/*
-!/reports/reproduction/FINDINGS.md
-!/reports/checkpoint_search/
-/reports/checkpoint_search/*
-!/reports/checkpoint_search/RESULTS.md
-
-# Logs, temporary files, and local secrets
-*.log
-*.tmp
-*.bak
-*.swp
-*.swo
-*~
-.env
-.env.*
-!.env.example
-.streamlit/secrets.toml
+/gui/
+/experiments/
+/scripts/
+!/scripts/render_balanced_images.sh
 
 # Editor and OS files
 .vscode/
 .idea/
 .DS_Store
-Thumbs.db
+/results/
+!/results/balanced_images/
+# Machine-specific environment records
+/environments/
