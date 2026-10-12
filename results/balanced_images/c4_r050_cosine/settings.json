@@ -1,0 +1,57 @@
+{
+  "status": "DONE",
+  "finished_at": "2026-10-12T10:20:02.034754+00:00",
+  "n_images": 10,
+  "stage": "C4",
+  "ratio": 0.5,
+  "metric": "cosine",
+  "checkpoint_sha256": "307c8b03e5abfdfd7f2ffeb6587e7e74ea939d96620b321a6f7b7d9055f5ddf4",
+  "preprocess": {
+    "long_edge": 1333,
+    "pad_divisor": 32,
+    "mean": [
+      123.675,
+      116.28,
+      103.53
+    ],
+    "std": [
+      58.395,
+      57.12,
+      57.375
+    ],
+    "channel_order": "RGB",
+    "interpolation": "bilinear",
+    "antialias": false,
+    "align_corners": false,
+    "padding": "bottom_right_normalized_zero",
+    "short_edge": 800,
+    "resize_backend": "opencv"
+  },
+  "degradation": {
+    "ratios": [
+      0.75,
+      0.5,
+      0.25
+    ],
+    "downsample": "bilinear",
+    "antialias": true,
+    "upsample": "bilinear",
+    "align_corners": false,
+    "rounding": "half_up",
+    "dtype": "float32"
+  },
+  "background_reference": "Per-image mean on valid input pixels outside all touched GT/ignore pixels; padding excluded",
+  "threshold": "D / image background mean > 1.4 (white), otherwise black; includes object and background pixels",
+  "threshold_value": 1.4,
+  "projection": "Input-space discrepancy resized bilinearly to original image grid before thresholding",
+  "layout": "two panels: original + GT; binary + same GT",
+  "size_basis": "sqrt(original GT width*height)",
+  "size_colors": {
+    "VT": "#FF4D6D",
+    "T": "#FFB000",
+    "S": "#00BFC4",
+    "M": "#4C78FF",
+    "L": "#B279FF",
+    "underflow": "#BDBDBD"
+  }
+}
