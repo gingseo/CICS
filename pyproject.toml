@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cics-discrepancy"
+version = "0.1.0"
+description = "Resolution-loss sensitivity experiments for small objects"
+requires-python = ">=3.10"
+dependencies = ["torch>=2.1", "numpy", "Pillow", "PyYAML", "scipy", "pandas", "matplotlib", "streamlit>=1.37"]
+
+[project.optional-dependencies]
+test = ["pytest"]
+detector = ["mmengine==0.10.7", "mmdet==3.3.0", "pycocotools"]
+
+[tool.setuptools]
+packages = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

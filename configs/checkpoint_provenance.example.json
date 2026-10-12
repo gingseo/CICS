@@ -1,0 +1,10 @@
+{
+  "source_url": "REPLACE with checkpoint source URL or local training run",
+  "license": "REPLACE with verified license",
+  "code_commit": "REPLACE with source commit",
+  "training_split": "unknown",
+  "classes": ["pedestrian", "people", "bicycle", "car", "van", "truck", "tricycle", "awning-tricycle", "bus", "motor"],
+  "preprocessing": "REPLACE with source config and original evaluation preprocessing",
+  "reported_metrics": null,
+  "comparison_to_reported_metrics": "not established"
+}
